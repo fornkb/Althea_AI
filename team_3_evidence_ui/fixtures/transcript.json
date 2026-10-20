@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "transcript_id": "tr_50421ac67489a8828b38e7fbcbb64f06964f8a8b7c1df67252ccce5df12c95d7",
+  "origin": "fixture",
+  "language": "en",
+  "duration_s": 65.0,
+  "source": {
+    "kind": "sample",
+    "title": "Riverton sample — fictional",
+    "original_filename": null,
+    "content_sha256": "2c63e2fb17b0677d4426f38312874ba70987ee833f3bdfce2f0d63ae315b387d",
+    "audio_relpath": null
+  },
+  "speakers": [
+    {
+      "speaker_id": "speaker_01",
+      "display_name": "Alex"
+    },
+    {
+      "speaker_id": "speaker_02",
+      "display_name": "Blair"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_0001",
+      "speaker_id": "speaker_01",
+      "start_s": 0.0,
+      "end_s": 8.0,
+      "text": "In 2024, Riverton's transport budget was 10 million US dollars."
+    },
+    {
+      "segment_id": "seg_0002",
+      "speaker_id": "speaker_02",
+      "start_s": 8.0,
+      "end_s": 16.0,
+      "text": "In 2024, Riverton's transport budget was 12 million US dollars."
+    },
+    {
+      "segment_id": "seg_0003",
+      "speaker_id": "speaker_01",
+      "start_s": 16.0,
+      "end_s": 24.0,
+      "text": "Riverton's unemployment rate was 5 percent in 2023."
+    },
+    {
+      "segment_id": "seg_0004",
+      "speaker_id": "speaker_02",
+      "start_s": 24.0,
+      "end_s": 32.0,
+      "text": "Riverton's unemployment rate was 6 percent in 2024."
+    },
+    {
+      "segment_id": "seg_0005",
+      "speaker_id": "speaker_01",
+      "start_s": 32.0,
+      "end_s": 40.0,
+      "text": "Riverton's 2025 library allocation was 2.5 million US dollars."
+    },
+    {
+      "segment_id": "seg_0006",
+      "speaker_id": "speaker_02",
+      "start_s": 40.0,
+      "end_s": 48.0,
+      "text": "Riverton's 2025 library allocation was 2500000 US dollars."
+    },
+    {
+      "segment_id": "seg_0007",
+      "speaker_id": "speaker_01",
+      "start_s": 48.0,
+      "end_s": 56.0,
+      "text": "I think this is the best transport policy."
+    },
+    {
+      "segment_id": "seg_0008",
+      "speaker_id": "speaker_02",
+      "start_s": 56.0,
+      "end_s": 65.0,
+      "text": "In another report, it increased by five percent."
+    }
+  ],
+  "issues": [],
+  "usage": [
+    {
+      "stage": "transcription",
+      "provider": "fixture",
+      "model": "fixture-v1",
+      "request_count": 0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    }
+  ]
+}

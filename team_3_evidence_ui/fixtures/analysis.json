@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_id": "an_f36edacdf7f3e3a6cd589028b4e2fd9d47c9bad85e9b1a975568a24b807b822e",
+  "transcript_id": "tr_50421ac67489a8828b38e7fbcbb64f06964f8a8b7c1df67252ccce5df12c95d7",
+  "claims": [
+    {
+      "claim_id": "cl_0001",
+      "speaker_id": "speaker_01",
+      "proposition": "In 2024, Riverton's transport budget was 10 million US dollars.",
+      "subject": "Riverton",
+      "metric": "transport budget",
+      "period": "2024",
+      "geography": "Riverton",
+      "population": "not_applicable",
+      "measurement_basis": "annual allocation",
+      "qualifiers": [],
+      "checkability": "checkable",
+      "missing_context": [],
+      "source_spans": [
+        {
+          "segment_id": "seg_0001",
+          "start_char": 0,
+          "end_char": 63,
+          "quote": "In 2024, Riverton's transport budget was 10 million US dollars."
+        }
+      ],
+      "quantity": {
+        "raw_text": "10 million US dollars",
+        "value": "10000000",
+        "lower": null,
+        "upper": null,
+        "operator": "eq",
+        "unit": "currency",
+        "currency": "USD",
+        "basis": "annual allocation"
+      }
+    },
+    {
+      "claim_id": "cl_0002",
+      "speaker_id": "speaker_02",
+      "proposition": "In 2024, Riverton's transport budget was 12 million US dollars.",
+      "subject": "Riverton",
+      "metric": "transport budget",
+      "period": "2024",
+      "geography": "Riverton",
+      "population": "not_applicable",
+      "measurement_basis": "annual allocation",
+      "qualifiers": [],
+      "checkability": "checkable",
+      "missing_context": [],
+      "source_spans": [
+        {
+          "segment_id": "seg_0002",
+          "start_char": 0,
+          "end_char": 63,
+          "quote": "In 2024, Riverton's transport budget was 12 million US dollars."
+        }
+      ],
+      "quantity": {
+        "raw_text": "12 million US dollars",
+        "value": "12000000",
+        "lower": null,
+        "upper": null,
+        "operator": "eq",
+        "unit": "currency",
+        "currency": "USD",
+        "basis": "annual allocation"
+      }
+    },
+    {
+      "claim_id": "cl_0003",
+      "speaker_id": "speaker_01",
+      "proposition": "Riverton's unemployment rate was 5 percent in 2023.",
+      "subject": "Riverton",
+      "metric": "unemployment rate",
+      "period": "2023",
+      "geography": "Riverton",
+      "population": null,
+      "measurement_basis": null,
+      "qualifiers": [],
+      "checkability": "checkable",
+      "missing_context": [
+        "statistical population",
+        "measurement definition"
+      ],
+      "source_spans": [
+        {
+          "segment_id": "seg_0003",
+          "start_char": 0,
+          "end_char": 51,
+          "quote": "Riverton's unemployment rate was 5 percent in 2023."
+        }
+      ],
+      "quantity": {
+        "raw_text": "5 percent",
+        "value": "5",
+        "lower": null,
+        "upper": null,
+        "operator": "eq",
+        "unit": "percent",
+        "currency": null,
+        "basis": null
+      }
+    },
+    {
+      "claim_id": "cl_0004",
+      "speaker_id": "speaker_02",
+      "proposition": "Riverton's unemployment rate was 6 percent in 2024.",
+      "subject": "Riverton",
+      "metric": "unemployment rate",
+      "period": "2024",
+      "geography": "Riverton",
+      "population": null,
+      "measurement_basis": null,
+      "qualifiers": [],
+      "checkability": "checkable",
+      "missing_context": [
+        "statistical population",
+        "measurement definition"
+      ],
+      "source_spans": [
+        {
+          "segment_id": "seg_0004",
+          "start_char": 0,
+          "end_char": 51,
+          "quote": "Riverton's unemployment rate was 6 percent in 2024."
+        }
+      ],
+      "quantity": {
+        "raw_text": "6 percent",
+        "value": "6",
+        "lower": null,
+        "upper": null,
+        "operator": "eq",
+        "unit": "percent",
+        "currency": null,
+        "basis": null
+      }
+    },
+    {
+      "claim_id": "cl_0005",
+      "speaker_id": "speaker_01",
+      "proposition": "Riverton's 2025 library allocation was 2.5 million US dollars.",
+      "subject": "Riverton",
+      "metric": "library allocation",
+      "period": "2025",
+      "geography": "Riverton",
+      "population": "not_applicable",
+      "measurement_basis": "annual allocation",
+      "qualifiers": [],
+      "checkability": "checkable",
+      "missing_context": [],
+      "source_spans": [
+        {
+          "segment_id": "seg_0005",
+          "start_char": 0,
+          "end_char": 62,
+          "quote": "Riverton's 2025 library allocation was 2.5 million US dollars."
+        }
+      ],
+      "quantity": {
+        "raw_text": "2.5 million US dollars",
+        "value": "2500000",
+        "lower": null,
+        "upper": null,
+        "operator": "eq",
+        "unit": "currency",
+        "currency": "USD",
+        "basis": "annual allocation"
+      }
+    },
+    {
+      "claim_id": "cl_0006",
+      "speaker_id": "speaker_02",
+      "proposition": "Riverton's 2025 library allocation was 2500000 US dollars.",
+      "subject": "Riverton",
+      "metric": "library allocation",
+      "period": "2025",
+      "geography": "Riverton",
+      "population": "not_applicable",
+      "measurement_basis": "annual allocation",
+      "qualifiers": [],
+      "checkability": "checkable",
+      "missing_context": [],
+      "source_spans": [
+        {
+          "segment_id": "seg_0006",
+          "start_char": 0,
+          "end_char": 58,
+          "quote": "Riverton's 2025 library allocation was 2500000 US dollars."
+        }
+      ],
+      "quantity": {
+        "raw_text": "2500000 US dollars",
+        "value": "2500000",
+        "lower": null,
+        "upper": null,
+        "operator": "eq",
+        "unit": "currency",
+        "currency": "USD",
+        "basis": "annual allocation"
+      }
+    },
+    {
+      "claim_id": "cl_0007",
+      "speaker_id": "speaker_02",
+      "proposition": "In another report, it increased by five percent.",
+      "subject": null,
+      "metric": null,
+      "period": null,
+      "geography": null,
+      "population": null,
+      "measurement_basis": null,
+      "qualifiers": [],
+      "checkability": "needs_context",
+      "missing_context": [
+        "subject",
+        "metric",
+        "period",
+        "geography",
+        "basis"
+      ],
+      "source_spans": [
+        {
+          "segment_id": "seg_0008",
+          "start_char": 0,
+          "end_char": 48,
+          "quote": "In another report, it increased by five percent."
+        }
+      ],
+      "quantity": {
+        "raw_text": "five percent",
+        "value": "5",
+        "lower": null,
+        "upper": null,
+        "operator": "eq",
+        "unit": "percent",
+        "currency": null,
+        "basis": null
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "pair_id": "pair_0001",
+      "claim_a_id": "cl_0001",
+      "claim_b_id": "cl_0002",
+      "relation": "numeric_discrepancy",
+      "explanation": "Same annual city budget and currency; stated values differ by USD 2000000.",
+      "numeric_difference": "2000000",
+      "numeric_difference_unit": "currency",
+      "priority": 1,
+      "method": "fixture"
+    },
+    {
+      "pair_id": "pair_0002",
+      "claim_a_id": "cl_0003",
+      "claim_b_id": "cl_0004",
+      "relation": "different_scope",
+      "explanation": "Different years, 2023 and 2024; this does not establish a contradiction.",
+      "numeric_difference": null,
+      "numeric_difference_unit": null,
+      "priority": 3,
+      "method": "fixture"
+    },
+    {
+      "pair_id": "pair_0003",
+      "claim_a_id": "cl_0005",
+      "claim_b_id": "cl_0006",
+      "relation": "compatible",
+      "explanation": "Both normalize to USD 2500000 for the same annual allocation.",
+      "numeric_difference": "0",
+      "numeric_difference_unit": "currency",
+      "priority": 3,
+      "method": "fixture"
+    }
+  ],
+  "issues": [],
+  "usage": [
+    {
+      "stage": "extraction",
+      "provider": "fixture",
+      "model": "fixture-v1",
+      "request_count": 0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "stage": "comparison",
+      "provider": "fixture",
+      "model": "fixture-v1",
+      "request_count": 0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    }
+  ]
+}
