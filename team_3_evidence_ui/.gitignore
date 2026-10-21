@@ -1,0 +1,13 @@
+.venv/
+.deps/
+.tmp/
+.pytest_cache/
+__pycache__/
+*.egg-info/
+build/
+dist/
+data/
+!src/althea_evidence_ui/data/
+out/
+.env
+.streamlit/secrets.toml

@@ -1,0 +1,1175 @@
+{
+  "$defs": {
+    "Analysis": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "1.0.0",
+            "1.1.0"
+          ],
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "analysis_id": {
+          "minLength": 1,
+          "title": "Analysis Id",
+          "type": "string"
+        },
+        "transcript_id": {
+          "minLength": 1,
+          "title": "Transcript Id",
+          "type": "string"
+        },
+        "claims": {
+          "items": {
+            "$ref": "#/$defs/Claim"
+          },
+          "title": "Claims",
+          "type": "array"
+        },
+        "pairs": {
+          "items": {
+            "$ref": "#/$defs/PairAssessment"
+          },
+          "title": "Pairs",
+          "type": "array"
+        },
+        "issues": {
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "title": "Issues",
+          "type": "array"
+        },
+        "usage": {
+          "items": {
+            "$ref": "#/$defs/Usage"
+          },
+          "title": "Usage",
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema_version",
+        "analysis_id",
+        "transcript_id",
+        "claims",
+        "pairs",
+        "issues",
+        "usage"
+      ],
+      "title": "Analysis",
+      "type": "object"
+    },
+    "Claim": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "minLength": 1,
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "speaker_id": {
+          "minLength": 1,
+          "title": "Speaker Id",
+          "type": "string"
+        },
+        "proposition": {
+          "minLength": 1,
+          "title": "Proposition",
+          "type": "string"
+        },
+        "subject": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Subject"
+        },
+        "metric": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Metric"
+        },
+        "period": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Period"
+        },
+        "geography": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Geography"
+        },
+        "population": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Population"
+        },
+        "measurement_basis": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Measurement Basis"
+        },
+        "qualifiers": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Qualifiers",
+          "type": "array"
+        },
+        "checkability": {
+          "enum": [
+            "checkable",
+            "needs_context"
+          ],
+          "title": "Checkability",
+          "type": "string"
+        },
+        "missing_context": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Context",
+          "type": "array"
+        },
+        "source_spans": {
+          "items": {
+            "$ref": "#/$defs/SourceSpan"
+          },
+          "title": "Source Spans",
+          "type": "array"
+        },
+        "quantity": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "claim_id",
+        "speaker_id",
+        "proposition",
+        "subject",
+        "metric",
+        "period",
+        "geography",
+        "population",
+        "measurement_basis",
+        "qualifiers",
+        "checkability",
+        "missing_context",
+        "source_spans",
+        "quantity"
+      ],
+      "title": "Claim",
+      "type": "object"
+    },
+    "ClaimVerdict": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "minLength": 1,
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "supported",
+            "refuted",
+            "insufficient_evidence",
+            "needs_context"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "rationale": {
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "$ref": "#/$defs/EvidenceRef"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "claim_id",
+        "status",
+        "rationale",
+        "evidence_refs"
+      ],
+      "title": "ClaimVerdict",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "pair_id": {
+          "minLength": 1,
+          "title": "Pair Id",
+          "type": "string"
+        },
+        "claim_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Claim Ids",
+          "type": "array"
+        },
+        "url": {
+          "minLength": 1,
+          "title": "Url",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "publisher": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Publisher"
+        },
+        "published_date": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Published Date"
+        },
+        "retrieved_at": {
+          "minLength": 1,
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "content": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Content"
+        },
+        "content_origin": {
+          "enum": [
+            "retrieved_excerpt",
+            "grounded_summary",
+            "metadata_only"
+          ],
+          "title": "Content Origin",
+          "type": "string"
+        },
+        "queries": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Queries",
+          "type": "array"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "pair_id",
+        "claim_ids",
+        "url",
+        "title",
+        "publisher",
+        "published_date",
+        "retrieved_at",
+        "content",
+        "content_origin",
+        "queries"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "EvidenceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "stance": {
+          "enum": [
+            "supports",
+            "refutes",
+            "context"
+          ],
+          "title": "Stance",
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "stance"
+      ],
+      "title": "EvidenceRef",
+      "type": "object"
+    },
+    "GroundingAttribution": {
+      "additionalProperties": false,
+      "properties": {
+        "pair_id": {
+          "minLength": 1,
+          "title": "Pair Id",
+          "type": "string"
+        },
+        "search_entry_point_html": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Search Entry Point Html"
+        }
+      },
+      "required": [
+        "pair_id",
+        "search_entry_point_html"
+      ],
+      "title": "GroundingAttribution",
+      "type": "object"
+    },
+    "Issue": {
+      "additionalProperties": false,
+      "properties": {
+        "stage": {
+          "enum": [
+            "input",
+            "transcription",
+            "analysis",
+            "verification",
+            "storage",
+            "integration"
+          ],
+          "title": "Stage",
+          "type": "string"
+        },
+        "code": {
+          "minLength": 1,
+          "title": "Code",
+          "type": "string"
+        },
+        "message": {
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "retryable": {
+          "title": "Retryable",
+          "type": "boolean"
+        },
+        "related_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Related Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "stage",
+        "code",
+        "message",
+        "retryable",
+        "related_ids"
+      ],
+      "title": "Issue",
+      "type": "object"
+    },
+    "PairAssessment": {
+      "additionalProperties": false,
+      "properties": {
+        "pair_id": {
+          "minLength": 1,
+          "title": "Pair Id",
+          "type": "string"
+        },
+        "claim_a_id": {
+          "minLength": 1,
+          "title": "Claim A Id",
+          "type": "string"
+        },
+        "claim_b_id": {
+          "minLength": 1,
+          "title": "Claim B Id",
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "direct_conflict",
+            "numeric_discrepancy",
+            "compatible",
+            "different_scope",
+            "insufficient_context"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "explanation": {
+          "minLength": 1,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "numeric_difference": {
+          "anyOf": [
+            {
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Numeric Difference"
+        },
+        "numeric_difference_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Numeric Difference Unit"
+        },
+        "priority": {
+          "enum": [
+            1,
+            2,
+            3
+          ],
+          "title": "Priority",
+          "type": "integer"
+        },
+        "method": {
+          "enum": [
+            "deterministic",
+            "llm",
+            "hybrid",
+            "fixture"
+          ],
+          "title": "Method",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pair_id",
+        "claim_a_id",
+        "claim_b_id",
+        "relation",
+        "explanation",
+        "numeric_difference",
+        "numeric_difference_unit",
+        "priority",
+        "method"
+      ],
+      "title": "PairAssessment",
+      "type": "object"
+    },
+    "PairVerdict": {
+      "additionalProperties": false,
+      "properties": {
+        "pair_id": {
+          "minLength": 1,
+          "title": "Pair Id",
+          "type": "string"
+        },
+        "verdicts": {
+          "items": {
+            "$ref": "#/$defs/ClaimVerdict"
+          },
+          "title": "Verdicts",
+          "type": "array"
+        },
+        "summary": {
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pair_id",
+        "verdicts",
+        "summary"
+      ],
+      "title": "PairVerdict",
+      "type": "object"
+    },
+    "Quantity": {
+      "additionalProperties": false,
+      "properties": {
+        "raw_text": {
+          "minLength": 1,
+          "title": "Raw Text",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "lower": {
+          "anyOf": [
+            {
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Lower"
+        },
+        "upper": {
+          "anyOf": [
+            {
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Upper"
+        },
+        "operator": {
+          "enum": [
+            "eq",
+            "approx",
+            "gt",
+            "ge",
+            "lt",
+            "le",
+            "range"
+          ],
+          "title": "Operator",
+          "type": "string"
+        },
+        "unit": {
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        },
+        "currency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Currency"
+        },
+        "basis": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Basis"
+        }
+      },
+      "required": [
+        "raw_text",
+        "value",
+        "lower",
+        "upper",
+        "operator",
+        "unit",
+        "currency",
+        "basis"
+      ],
+      "title": "Quantity",
+      "type": "object"
+    },
+    "Segment": {
+      "additionalProperties": false,
+      "properties": {
+        "segment_id": {
+          "minLength": 1,
+          "title": "Segment Id",
+          "type": "string"
+        },
+        "speaker_id": {
+          "minLength": 1,
+          "title": "Speaker Id",
+          "type": "string"
+        },
+        "start_s": {
+          "minimum": 0,
+          "title": "Start S",
+          "type": "number"
+        },
+        "end_s": {
+          "minimum": 0,
+          "title": "End S",
+          "type": "number"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "segment_id",
+        "speaker_id",
+        "start_s",
+        "end_s",
+        "text"
+      ],
+      "title": "Segment",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "audio",
+            "transcript",
+            "sample"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "original_filename": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Original Filename"
+        },
+        "content_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "audio_relpath": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Audio Relpath"
+        }
+      },
+      "required": [
+        "kind",
+        "title",
+        "original_filename",
+        "content_sha256",
+        "audio_relpath"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "SourceSpan": {
+      "additionalProperties": false,
+      "properties": {
+        "segment_id": {
+          "minLength": 1,
+          "title": "Segment Id",
+          "type": "string"
+        },
+        "start_char": {
+          "minimum": 0,
+          "title": "Start Char",
+          "type": "integer"
+        },
+        "end_char": {
+          "exclusiveMinimum": 0,
+          "title": "End Char",
+          "type": "integer"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "segment_id",
+        "start_char",
+        "end_char",
+        "quote"
+      ],
+      "title": "SourceSpan",
+      "type": "object"
+    },
+    "Speaker": {
+      "additionalProperties": false,
+      "properties": {
+        "speaker_id": {
+          "minLength": 1,
+          "title": "Speaker Id",
+          "type": "string"
+        },
+        "display_name": {
+          "minLength": 1,
+          "title": "Display Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "speaker_id",
+        "display_name"
+      ],
+      "title": "Speaker",
+      "type": "object"
+    },
+    "Transcript": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "1.0.0",
+            "1.1.0"
+          ],
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "transcript_id": {
+          "minLength": 1,
+          "title": "Transcript Id",
+          "type": "string"
+        },
+        "origin": {
+          "enum": [
+            "api",
+            "imported",
+            "human_reviewed",
+            "fixture"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "language": {
+          "const": "en",
+          "title": "Language",
+          "type": "string"
+        },
+        "duration_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 300,
+          "title": "Duration S",
+          "type": "number"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "speakers": {
+          "items": {
+            "$ref": "#/$defs/Speaker"
+          },
+          "title": "Speakers",
+          "type": "array"
+        },
+        "segments": {
+          "items": {
+            "$ref": "#/$defs/Segment"
+          },
+          "title": "Segments",
+          "type": "array"
+        },
+        "issues": {
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "title": "Issues",
+          "type": "array"
+        },
+        "usage": {
+          "items": {
+            "$ref": "#/$defs/Usage"
+          },
+          "title": "Usage",
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema_version",
+        "transcript_id",
+        "origin",
+        "language",
+        "duration_s",
+        "source",
+        "speakers",
+        "segments",
+        "issues",
+        "usage"
+      ],
+      "title": "Transcript",
+      "type": "object"
+    },
+    "Unverified": {
+      "additionalProperties": false,
+      "properties": {
+        "pair_id": {
+          "minLength": 1,
+          "title": "Pair Id",
+          "type": "string"
+        },
+        "reason": {
+          "enum": [
+            "not_selected",
+            "budget_limit",
+            "provider_error",
+            "no_sources",
+            "missing_context"
+          ],
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pair_id",
+        "reason"
+      ],
+      "title": "Unverified",
+      "type": "object"
+    },
+    "Usage": {
+      "additionalProperties": false,
+      "properties": {
+        "stage": {
+          "enum": [
+            "transcription",
+            "extraction",
+            "comparison",
+            "retrieval",
+            "adjudication"
+          ],
+          "title": "Stage",
+          "type": "string"
+        },
+        "provider": {
+          "enum": [
+            "vertex",
+            "gemini",
+            "fixture"
+          ],
+          "title": "Provider",
+          "type": "string"
+        },
+        "model": {
+          "minLength": 1,
+          "title": "Model",
+          "type": "string"
+        },
+        "request_count": {
+          "minimum": 0,
+          "title": "Request Count",
+          "type": "integer"
+        },
+        "input_tokens": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Input Tokens"
+        },
+        "output_tokens": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Output Tokens"
+        }
+      },
+      "required": [
+        "stage",
+        "provider",
+        "model",
+        "request_count",
+        "input_tokens",
+        "output_tokens"
+      ],
+      "title": "Usage",
+      "type": "object"
+    },
+    "Verification": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "1.0.0",
+            "1.1.0"
+          ],
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "verification_id": {
+          "minLength": 1,
+          "title": "Verification Id",
+          "type": "string"
+        },
+        "analysis_id": {
+          "minLength": 1,
+          "title": "Analysis Id",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "results": {
+          "items": {
+            "$ref": "#/$defs/PairVerdict"
+          },
+          "title": "Results",
+          "type": "array"
+        },
+        "unverified": {
+          "items": {
+            "$ref": "#/$defs/Unverified"
+          },
+          "title": "Unverified",
+          "type": "array"
+        },
+        "grounding_attributions": {
+          "items": {
+            "$ref": "#/$defs/GroundingAttribution"
+          },
+          "title": "Grounding Attributions",
+          "type": "array"
+        },
+        "issues": {
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "title": "Issues",
+          "type": "array"
+        },
+        "usage": {
+          "items": {
+            "$ref": "#/$defs/Usage"
+          },
+          "title": "Usage",
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema_version",
+        "verification_id",
+        "analysis_id",
+        "evidence",
+        "results",
+        "unverified",
+        "grounding_attributions",
+        "issues",
+        "usage"
+      ],
+      "title": "Verification",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1.0.0",
+        "1.1.0"
+      ],
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "job_id": {
+      "minLength": 1,
+      "title": "Job Id",
+      "type": "string"
+    },
+    "title": {
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "fixture",
+        "live"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ready",
+        "running",
+        "complete",
+        "partial",
+        "failed"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "created_at": {
+      "minLength": 1,
+      "title": "Created At",
+      "type": "string"
+    },
+    "updated_at": {
+      "minLength": 1,
+      "title": "Updated At",
+      "type": "string"
+    },
+    "transcript": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Transcript"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "analysis": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Analysis"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "verification": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Verification"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "issues": {
+      "items": {
+        "$ref": "#/$defs/Issue"
+      },
+      "title": "Issues",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "job_id",
+    "title",
+    "mode",
+    "status",
+    "created_at",
+    "updated_at",
+    "transcript",
+    "analysis",
+    "verification",
+    "issues"
+  ],
+  "title": "Snapshot",
+  "type": "object"
+}

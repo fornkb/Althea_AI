@@ -1,0 +1,35 @@
+.venv/
+.env
+.deps/
+.tmp/
+.pytest_cache/
+__pycache__/
+*.egg-info/
+build/
+dist/
+/data/
+*.sqlite*
+*.db
+*.log
+credentials*.json
+service-account*.json
+application_default_credentials.json
+raw_provider_responses/
+.streamlit/secrets.toml
+
+# Local planning, handoffs and presentation material
+/Althea_AI_Three_Person_Build_Pack.zip
+/Althea_AI_Full_Project_Context.md
+/build_handoffs/*.md
+HANDOFF.md
+/ACCEPTANCE_REPORT.md
+/DEMO_SCRIPT.md
+/integration/evaluation/
+/output/
+/presentation_work/
+
+# Generated validation reports and local artifacts
+reports/
+*.py[cod]
+.coverage
+htmlcov/

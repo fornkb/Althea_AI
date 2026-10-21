@@ -1,0 +1,12 @@
+.venv/
+.tmp/
+.pytest_cache/
+__pycache__/
+*.egg-info/
+build/
+dist/
+data/
+!src/althea_ingestion/data/
+out/
+.env
+*.sqlite*

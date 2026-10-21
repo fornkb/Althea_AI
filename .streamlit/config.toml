@@ -1,0 +1,18 @@
+[global]
+developmentMode = false
+
+[server]
+address = "127.0.0.1"
+maxUploadSize = 20
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#345b46"
+backgroundColor = "#f8f9f5"
+secondaryBackgroundColor = "#eff2ec"
+textColor = "#202b26"
+font = "sans serif"

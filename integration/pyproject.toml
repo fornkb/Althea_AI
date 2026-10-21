@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "althea-app"
+version = "1.0.0"
+description = "Integrated persistent Althea AI local application"
+requires-python = ">=3.12"
+dependencies = ["althea-ingestion==1.0.0", "althea-analysis==1.0.0", "althea-evidence-ui==1.0.0"]
+
+[project.scripts]
+althea = "althea_app.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "althea-analysis"
+version = "1.0.0"
+description = "Source-grounded claims and potential disagreements for Althea AI"
+requires-python = ">=3.12"
+dependencies = ["pydantic>=2.13,<3", "google-genai>=2.28,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=9,<10"]
+
+[project.scripts]
+althea-analysis = "althea_analysis.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+althea_analysis = ["prompts/*.txt", "data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-m 'not live'"
+markers = ["live: explicit billable Google Cloud smoke test, excluded by default"]

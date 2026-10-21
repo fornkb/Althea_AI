@@ -1,0 +1,41 @@
+{
+  "properties": {
+    "pairs": {
+      "items": {
+        "properties": {
+          "claim_a_id": {
+            "type": "string"
+          },
+          "claim_b_id": {
+            "type": "string"
+          },
+          "relation": {
+            "enum": [
+              "direct_conflict",
+              "numeric_discrepancy",
+              "compatible",
+              "different_scope",
+              "insufficient_context"
+            ],
+            "type": "string"
+          },
+          "explanation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "claim_a_id",
+          "claim_b_id",
+          "relation",
+          "explanation"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "pairs"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,10 @@
+[global]
+developmentMode = false
+
+[server]
+maxUploadSize = 20
+fileWatcherType = "none"
+address = "127.0.0.1"
+
+[browser]
+gatherUsageStats = false

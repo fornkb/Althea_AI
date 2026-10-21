@@ -1,0 +1,117 @@
+{
+  "properties": {
+    "claims": {
+      "items": {
+        "properties": {
+          "speaker_id": {
+            "type": "string"
+          },
+          "proposition": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string",
+            "nullable": true
+          },
+          "metric": {
+            "type": "string",
+            "nullable": true
+          },
+          "period": {
+            "type": "string",
+            "nullable": true
+          },
+          "geography": {
+            "type": "string",
+            "nullable": true
+          },
+          "population": {
+            "type": "string",
+            "nullable": true
+          },
+          "measurement_basis": {
+            "type": "string",
+            "nullable": true
+          },
+          "qualifiers": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "checkability": {
+            "enum": [
+              "checkable",
+              "needs_context"
+            ],
+            "type": "string"
+          },
+          "missing_context": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "source_spans": {
+            "items": {
+              "properties": {
+                "segment_id": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "start_char": {
+                  "type": "integer",
+                  "nullable": true
+                },
+                "end_char": {
+                  "type": "integer",
+                  "nullable": true
+                }
+              },
+              "required": [
+                "segment_id",
+                "quote",
+                "start_char",
+                "end_char"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "quantity_raw": {
+            "type": "string",
+            "nullable": true
+          },
+          "currency_context": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "speaker_id",
+          "proposition",
+          "subject",
+          "metric",
+          "period",
+          "geography",
+          "population",
+          "measurement_basis",
+          "qualifiers",
+          "checkability",
+          "missing_context",
+          "source_spans",
+          "quantity_raw",
+          "currency_context"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "claims"
+  ],
+  "type": "object"
+}

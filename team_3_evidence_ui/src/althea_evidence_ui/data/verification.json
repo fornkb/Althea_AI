@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "verification_id": "ve_6adadf5e05bdfaa2c12d813842510eea1a799028a73118acd5e7220ccc53eb35",
+  "analysis_id": "an_f36edacdf7f3e3a6cd589028b4e2fd9d47c9bad85e9b1a975568a24b807b822e",
+  "evidence": [
+    {
+      "evidence_id": "ev_pair_0001_0001",
+      "pair_id": "pair_0001",
+      "claim_ids": [
+        "cl_0001",
+        "cl_0002"
+      ],
+      "url": "https://example.com/althea-fixtures/riverton-budget-2024",
+      "title": "Fictional Riverton budget record",
+      "publisher": "Synthetic demo fixture",
+      "published_date": "2024-12-31",
+      "retrieved_at": "2026-10-16T00:00:00Z",
+      "content": "Riverton's adopted transport budget for calendar year 2024 was USD 11000000.",
+      "content_origin": "retrieved_excerpt",
+      "queries": [
+        "fictional fixture; no live search"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "pair_id": "pair_0001",
+      "verdicts": [
+        {
+          "claim_id": "cl_0001",
+          "status": "refuted",
+          "rationale": "The synthetic reference record states USD 11000000; the stated amount differs.",
+          "evidence_refs": [
+            {
+              "evidence_id": "ev_pair_0001_0001",
+              "stance": "refutes"
+            }
+          ]
+        },
+        {
+          "claim_id": "cl_0002",
+          "status": "refuted",
+          "rationale": "The synthetic reference record states USD 11000000; the stated amount differs.",
+          "evidence_refs": [
+            {
+              "evidence_id": "ev_pair_0001_0001",
+              "stance": "refutes"
+            }
+          ]
+        }
+      ],
+      "summary": "Both amounts differ from the fictional reference. This is synthetic demonstration evidence, not a live fact check."
+    }
+  ],
+  "unverified": [],
+  "grounding_attributions": [],
+  "issues": [],
+  "usage": [
+    {
+      "stage": "retrieval",
+      "provider": "fixture",
+      "model": "fixture-v1",
+      "request_count": 0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "stage": "adjudication",
+      "provider": "fixture",
+      "model": "fixture-v1",
+      "request_count": 0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    }
+  ]
+}
