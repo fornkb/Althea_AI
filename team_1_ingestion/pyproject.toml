@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "althea_ingestion"
+version = "0.1.0"
+description = "Storage layer for Althea AI ingestion"
+requires-python = ">=3.12"
+dependencies = ["pydantic>=2.0", "pytest"]
