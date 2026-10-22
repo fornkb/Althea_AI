@@ -1,5 +1,6 @@
 .venv/
 .env
+.env.*.tmp
 .deps/
 .tmp/
 .pytest_cache/
@@ -24,7 +25,7 @@ raw_provider_responses/
 HANDOFF.md
 /ACCEPTANCE_REPORT.md
 /DEMO_SCRIPT.md
-/integration/evaluation/
+/app/evaluation/
 /output/
 /presentation_work/
 
